@@ -1,0 +1,1724 @@
+fileFormatVersion: 2
+guid: 637f5628829e5bd4c8f189dbd6cf1035
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: right_blue_button
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1849
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fd3db7e8926194898dd398159c9fb8
+      internalID: 985849650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_green_button
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1849
+        width: 185
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838a7b4c863d14e4dae7aa6ba80a444f
+      internalID: -1793127501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_red_button
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1849
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8faca4a15def3a2469dd17d5650f6dc9
+      internalID: 1580638501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_grey_button
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1849
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da218f012f493242841ed92c963261f
+      internalID: 371200880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: home_blue_button
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1849
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdee087d3c508354a97d1be8d872416b
+      internalID: -429774029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: home_green_button
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1849
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6337aaf3cd4dbea439641e3a93ad838f
+      internalID: 1257602028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: home_red_button
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1849
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85cb0607dfef1648a9ccef542d483f6
+      internalID: 1259378328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: home_grey_button
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 1849
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c05eb90b3a84e14b859eaa6490e5bc3
+      internalID: -700274501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_blue_button
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1632
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d5a13b7162c284f9f1c8dfe51b2beb
+      internalID: 238095778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_green_button
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1632
+        width: 185
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3c3d427fe8f5d41984f1df62121bd7
+      internalID: -2961421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_red_button
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1632
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3adbacdd8229740b8b83b26b449dc9
+      internalID: 2130107669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_grey_button
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1632
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0d809fc2d5c9543876bc1ea8a0b349
+      internalID: -1789800155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: info_blue_button
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1632
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9605eabf52af2240a25d409ab6f43a3
+      internalID: -333651633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: info_green_button
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1632
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7ea77609475e540ad17655589d49de
+      internalID: 621809512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: info_red_button
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 1632
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a591ac6e6bc3f944395810ba43e77acb
+      internalID: -225488337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: info_grey_button
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 1632
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678a3d899e12f42429527ee61f3ee82d
+      internalID: 1551051924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: up_blue_button
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1414
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e234c4050cc4864ba9a7953656e43bb
+      internalID: -230415916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: up_green_button
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1414
+        width: 185
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40ab4974daeb0a4bb51088afca98a5c
+      internalID: 1079767285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: up_red_button
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1414
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda10fbb1d1ef5a419eb64d8a742cfbb
+      internalID: 1819390709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: up_grey_button
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1414
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5376bfef2d817f4183588f9ef1ee0b1
+      internalID: -19816304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_blue_button
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1414
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29328acb954301445a1b894997bdbb01
+      internalID: 944824947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_green_button
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1414
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c792ae3aca33f304d9217152f9a2e51f
+      internalID: 2045431238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_red_button
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1414
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 169e6e91012b0cc4aa1c157a5fe37dab
+      internalID: -611798110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: person_grey_button
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 1414
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8c2dd3681c291489e673d8cd39eebc
+      internalID: 1252252331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_blue_button
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1196
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebb3a8a3f6b99a4b9e4b3cbd3ff92b7
+      internalID: 582455244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_green_button
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1196
+        width: 185
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc70bf078ce48d5459c7eece15770e22
+      internalID: -1643757913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_red_button
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1196
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa863f4623ed3a48b2b208c18e22cb7
+      internalID: -1068268062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: down_grey_button
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1196
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af8b7d582f1c3a4e8fa0c472ef98446
+      internalID: 358473272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: persons_blue_button
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1196
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1f104bacb7ccf4aa86d5781bfd6b25
+      internalID: -833541096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: persons_green_button
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1196
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9980d7fd9ea134d90197ad68d8f4f3
+      internalID: -367530865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: persons_red_button
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1196
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a96ea0118add949aa04b21bbef8de7
+      internalID: 1785714254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: persons_grey_button
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 1196
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c85eeddcddae864294d104526523919
+      internalID: 354821508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: levelChoice_blue_button
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 978
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84fe3a11da9c734dbeb976aea33b957
+      internalID: 482044076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: levelChoice_green_button
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 978
+        width: 185
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589b29f969f39e74895b71479904875c
+      internalID: 2129126478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: levelChoice_red_button
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 978
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a39674f814d254d80165eb19aaeb16
+      internalID: 731900703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: levelChoice_grey_button
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 978
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4791e26c8c3df84297800acc9a617f0
+      internalID: -1227144949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash_blue_button
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 978
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 635fca9b23245ba48ba9c151c4bf005e
+      internalID: -1987449832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash_green_button
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 978
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b1376f6eebe8646bb64b1923942b27
+      internalID: -770038933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash_red_button
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 978
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8eb452ffa2fa5b49b6cefca7fb30509
+      internalID: -369597279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash_grey_button
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 978
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcef948f73951164ca9374eb5958218a
+      internalID: 1360102519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cup_blue_button
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 760
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2372dff790a2b84cb7545be6c9aa4d7
+      internalID: -1195234114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cup_green_button
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 760
+        width: 185
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7169bf89c84764d9b56be2260429b0
+      internalID: -1666417153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cup_red_button
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 760
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c9f0d4b6ab7154fbcc339212044f9f
+      internalID: 252509631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cup_grey_button
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 760
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874211d0063783e479ce36de9924957b
+      internalID: 72356442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shopping_cart_blue_button
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 760
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e13f5301e78fc54582f428251a55e03
+      internalID: 1287623376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shopping_cart_green_button
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 760
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5085f2b52b5eb3b4e8c9b5c6d26faa58
+      internalID: -456098136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shopping_cart_red_button
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 760
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a4a6383ed99434dac9a693405660b8
+      internalID: -823236896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shopping_cart_grey_button
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 760
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a642e29bc9b957149b51e025d112406c
+      internalID: 27325774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_blue_button
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 542
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c736220753dcadb4bbcb8ccf09f4683d
+      internalID: 1634989078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_green_button
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 542
+        width: 185
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560bcb808d3bbdd429c1b50d85decbef
+      internalID: 542962195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_red_button
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 542
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586b90e44b2420d47970893412e7e2a2
+      internalID: -928128497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pause_grey_button
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 542
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b4f5537b1b7d64e976e5459af2c772
+      internalID: 408463344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3_blue_button
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 542
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf4d886c37031d438d34c99c1fdb5a9
+      internalID: -1669652794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3_green_button
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 542
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f8e5483f079d14c9f6b11ec571fbe1
+      internalID: -2110513772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3_red_button
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 542
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1487d78c62318dc42b2d2a714beb1353
+      internalID: -1234816755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3x3_grey_button
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 542
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459e87cd514b50744855213786b7bf78
+      internalID: 315799725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_arrow_blue_button
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 324
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e129e46c96a98498bb648b7b510ccf
+      internalID: 1249820979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_arrow_green_button
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 324
+        width: 185
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c45241b6669f3499d5a2e6b03efe74
+      internalID: -576689327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_arrow_red_button
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 324
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7495719cac75494eacd14001871575b
+      internalID: -677562103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_arrow_grey_button
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 324
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e342d1f5929f91b4cbfa0001e25a7aec
+      internalID: 1027165021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plus_blue_button
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 324
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23844e46f16183347a0eb26c53486e70
+      internalID: -828615669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plus_green_button
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 324
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e159372a651aa8f4b854748973309b63
+      internalID: -453750296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plus_red_button
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 324
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6f3c08a348aaa4a8fb70dc271ba003
+      internalID: -308524435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plus_grey_button
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 324
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef11e240d3b1c57458c6207dde08dbf9
+      internalID: -1367054145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_arrow_blue_button
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 106
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5cbb54ba2a48f4a85df57160f3c9fd
+      internalID: -106447615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_arrow_green_button
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 106
+        width: 185
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a884cf9a8754984b9adf57d580def09
+      internalID: -388912155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_arrow_red_button
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 106
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ef0e2edb0f03d479607c41a68f5761
+      internalID: -1672160920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left_arrow_grey_button
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 106
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b509eef699d0fd4d894b1fc3a0db9bb
+      internalID: 1635721826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minus_blue_button
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 106
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163155d1e2f507c49a030a0db4bd7f15
+      internalID: -1309409603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minus_green_button
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 106
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fdb6cce01323664886991bf2c71ef7b
+      internalID: 1975454922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minus_red_button
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 106
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7361dd33f317a54b8f315d4399cbef1
+      internalID: -330740872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minus_grey_button
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 106
+        width: 184
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8515b828a0441744b8d98c0767a13f77
+      internalID: -1903755589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      3x3_blue_button: -1669652794
+      3x3_green_button: -2110513772
+      3x3_grey_button: 315799725
+      3x3_red_button: -1234816755
+      cup_blue_button: -1195234114
+      cup_green_button: -1666417153
+      cup_grey_button: 72356442
+      cup_red_button: 252509631
+      down_blue_button: 582455244
+      down_green_button: -1643757913
+      down_grey_button: 358473272
+      down_red_button: -1068268062
+      home_blue_button: -429774029
+      home_green_button: 1257602028
+      home_grey_button: -700274501
+      home_red_button: 1259378328
+      info_blue_button: -333651633
+      info_green_button: 621809512
+      info_grey_button: 1551051924
+      info_red_button: -225488337
+      left_arrow_blue_button: -106447615
+      left_arrow_green_button: -388912155
+      left_arrow_grey_button: 1635721826
+      left_arrow_red_button: -1672160920
+      left_blue_button: 238095778
+      left_green_button: -2961421
+      left_grey_button: -1789800155
+      left_red_button: 2130107669
+      levelChoice_blue_button: 482044076
+      levelChoice_green_button: 2129126478
+      levelChoice_grey_button: -1227144949
+      levelChoice_red_button: 731900703
+      minus_blue_button: -1309409603
+      minus_green_button: 1975454922
+      minus_grey_button: -1903755589
+      minus_red_button: -330740872
+      pause_blue_button: 1634989078
+      pause_green_button: 542962195
+      pause_grey_button: 408463344
+      pause_red_button: -928128497
+      person_blue_button: 944824947
+      person_green_button: 2045431238
+      person_grey_button: 1252252331
+      person_red_button: -611798110
+      persons_blue_button: -833541096
+      persons_green_button: -367530865
+      persons_grey_button: 354821508
+      persons_red_button: 1785714254
+      plus_blue_button: -828615669
+      plus_green_button: -453750296
+      plus_grey_button: -1367054145
+      plus_red_button: -308524435
+      right_arrow_blue_button: 1249820979
+      right_arrow_green_button: -576689327
+      right_arrow_grey_button: 1027165021
+      right_arrow_red_button: -677562103
+      right_blue_button: 985849650
+      right_green_button: -1793127501
+      right_grey_button: 371200880
+      right_red_button: 1580638501
+      shopping_cart_blue_button: 1287623376
+      shopping_cart_green_button: -456098136
+      shopping_cart_grey_button: 27325774
+      shopping_cart_red_button: -823236896
+      trash_blue_button: -1987449832
+      trash_green_button: -770038933
+      trash_grey_button: 1360102519
+      trash_red_button: -369597279
+      up_blue_button: -230415916
+      up_green_button: 1079767285
+      up_grey_button: -19816304
+      up_red_button: 1819390709
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

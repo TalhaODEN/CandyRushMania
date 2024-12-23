@@ -1,0 +1,39 @@
+# Unity Geçici Dosyalar
+[Ll]ibrary/
+[Tt]emp/
+Obj/
+Build/
+Builds/
+
+# Kullanıcı ayar dosyaları
+.vscode/
+.idea/
+*.user
+*.userprefs
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.swp
+
+# Asset Store dosyaları (yüklendiyse)
+Assets/AssetStoreTools*
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Windows Sistem dosyaları
+desktop.ini
+
+# Mono / Visual Studio
+.vs/
+.vscode/
+
+# IDE geçici dosyalar
+# Rider, Visual Studio veya başka bir IDE kullanıyorsan
+.idea/
+.vscode/
+
+# Unity paket yöneticisi (Package Manager) geçici dosyalar
+.packages/
