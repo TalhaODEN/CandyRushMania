@@ -27,7 +27,7 @@ public class SwipeManager : MonoBehaviour
     [SerializeField] private int targetColumn = -1;
 
     [Header("Bool Condition Variable")]
-    [SerializeField] private bool isCoroutineRunning;
+    [SerializeField] public bool isCoroutineRunning;
     [SerializeField] public bool isMatchedAnything;
     private void Start()
     {

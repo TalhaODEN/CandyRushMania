@@ -686,9 +686,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1561258749}
+  - component: {fileID: 1561258754}
+  - component: {fileID: 1561258753}
+  - component: {fileID: 1561258750}
   - component: {fileID: 1561258752}
   - component: {fileID: 1561258751}
-  - component: {fileID: 1561258750}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -733,6 +735,7 @@ MonoBehaviour:
   targetRow: 0
   targetColumn: 0
   isCoroutineRunning: 0
+  isMatchedAnything: 0
 --- !u!114 &1561258751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,6 +760,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd45ed280726f3f4d85806079c5b99ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1561258753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561258746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4dc4b83719366418cef70eb20d2573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeAmount: 0.1
+  shakeDuration: 0.5
+--- !u!114 &1561258754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561258746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abaae84b6ed6a04795f3cd8d3a67bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLimit: 6
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

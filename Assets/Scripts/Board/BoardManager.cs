@@ -60,7 +60,6 @@ public class BoardManager : MonoBehaviour
 
     private IEnumerator SlideCandies()
     {
-        Debug.Log("SlideCandies başladı");
         hasMoved = false;
 
         List<IEnumerator> slideCoroutines = new List<IEnumerator>();
@@ -166,8 +165,6 @@ public class BoardManager : MonoBehaviour
 
     private IEnumerator SpawnCandies()
     {
-        Debug.Log("SpawnCandies başladı");
-
         // İlk olarak spawn olacak şekerleri yerleştiriyoruz
         List<GameObject> candiesToMove = new List<GameObject>();
 
