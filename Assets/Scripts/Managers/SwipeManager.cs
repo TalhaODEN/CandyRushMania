@@ -8,6 +8,7 @@ public class SwipeManager : MonoBehaviour
     private Board board;
     private MatchFinder matchFinder;
     private BoardManager boardManager;
+    public int MoveLimit { get { return moveLimit;} }
 
     [Header("Mouse Infos")]
     [SerializeField] private Vector2 startMousePosition;
@@ -29,6 +30,10 @@ public class SwipeManager : MonoBehaviour
     [Header("Bool Condition Variable")]
     [SerializeField] public bool isCoroutineRunning;
     [SerializeField] public bool isMatchedAnything;
+
+    [Header("Move Limit")]
+    [SerializeField] private int moveLimit;
+
     private void Start()
     {
         board = FindObjectOfType<Board>();
@@ -46,6 +51,11 @@ public class SwipeManager : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && !isCoroutineRunning)
         {
+            if (moveLimit <= 0)
+            {
+                Debug.LogWarning("HAMLE SINIRINA ULAŞTIN");
+                return;
+            }
             startMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(startMousePosition, Vector2.zero);
             if (hit.collider != null)
@@ -159,6 +169,7 @@ public class SwipeManager : MonoBehaviour
         yield return StartCoroutine(boardManager.StartShiftAndSpawnProcess());
         if (targetCandy == null || selectedCandy == null)
         {
+            moveLimit--;
             ResetVariables();
             yield break;
         }
@@ -224,8 +235,6 @@ public class SwipeManager : MonoBehaviour
         selectedRow = selectedColumn = targetRow = targetColumn = -1;
         selectedCandy = targetCandy = null;
     }
-
-
 }
 
 

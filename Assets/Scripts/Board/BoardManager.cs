@@ -165,7 +165,6 @@ public class BoardManager : MonoBehaviour
 
     private IEnumerator SpawnCandies()
     {
-        // İlk olarak spawn olacak şekerleri yerleştiriyoruz
         List<GameObject> candiesToMove = new List<GameObject>();
 
         for (int x = 0; x < board.Width; x++)
@@ -173,7 +172,6 @@ public class BoardManager : MonoBehaviour
             candiesToMove.AddRange(SpawnColumn(x));
         }
 
-        // Tüm spawn işlemleri tamamlandıktan sonra animasyonları başlatıyoruz
         List<IEnumerator> moveCoroutines = new List<IEnumerator>();
         foreach (var candy in candiesToMove)
         {
@@ -183,7 +181,6 @@ public class BoardManager : MonoBehaviour
             moveCoroutines.Add(AnimateCandyMovement(candy, startPos, endPos, duration));
         }
 
-        // Animasyonları aynı anda başlatıyoruz
         foreach (var coroutine in moveCoroutines)
         {
             yield return StartCoroutine(coroutine);
@@ -200,17 +197,14 @@ public class BoardManager : MonoBehaviour
         {
             if (board.AllCandies[x, y] == null)
             {
-                // Spawn pozisyonunu belirle
                 Vector2 spawnPosition = board.AllTiles[x, board.Height - 1].transform.position + new Vector3(0, 1f, 0);
 
-                // Yeni şeker oluştur
                 int candyToUse = Random.Range(0, board.PrefabCandies.Length);
                 GameObject candy = Instantiate(board.PrefabCandies[candyToUse], spawnPosition, Quaternion.identity);
                 candy.GetComponent<Candie>().row = x;
                 candy.GetComponent<Candie>().column = y;
                 candy.name = $"{board.AllTiles[x, y].name}_candy";
 
-                // Spawn edilen şekerleri listeye ekliyoruz
                 candiesToMove.Add(candy);
                 board.AllCandies[x, y] = candy;
             }

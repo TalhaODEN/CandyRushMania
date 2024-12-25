@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 3
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -962,6 +962,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: star_panel_small
+      rect:
+        serializedVersion: 2
+        x: 3538
+        y: 2017
+        width: 430
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b45ba916d5a7140b8704c224ec258f
+      internalID: -176145991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top_UI_background
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 2355
+        width: 784
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f4a44d90bc817438e49e22cdd0f665
+      internalID: 560759817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1043,8 +1085,10 @@ TextureImporter:
       red_title_section_small: -500091256
       slider_background: -177381103
       square_grey: 590739732
+      star_panel_small: -176145991
       star_symboled_line_just_inside: -1467321976
       star_symboled_line_with_inside: 973194887
+      top_UI_background: 560759817
       upgrades_text: -348411592
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

@@ -108,7 +108,4 @@ public class Board : MonoBehaviour
     {
         return Random.Range(0, prefabCandies.Length);
     }
-
-    
-
 }

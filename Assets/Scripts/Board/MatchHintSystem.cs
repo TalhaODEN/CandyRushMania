@@ -6,23 +6,37 @@ public class MatchHintSystem : MonoBehaviour
     private Board board;
     private SwipeManager swipeManager;
     private CandyShake candyShake;
-    public float elapsedTime;
+
+    [Header("Time")]
+    [SerializeField] private float elapsedTime;
     [SerializeField] private float timeLimit;
-    private GameObject previousShakedCandy;
+
+    [Header("Previous Candy")]
+    [SerializeField] private GameObject previousShakedCandy;
+
+    [Header("Potential Matches List")]
+    [SerializeField] private List<GameObject> potentialMatches;
     private void Start()
     {
         board = FindObjectOfType<Board>();
         swipeManager = FindObjectOfType<SwipeManager>();
         candyShake = FindObjectOfType<CandyShake>();
+        potentialMatches = new List<GameObject>();
         previousShakedCandy = null;
         elapsedTime = 0f;
     }
 
     private void Update()
     {
-        if (swipeManager.isCoroutineRunning)
+        if (swipeManager.isCoroutineRunning || swipeManager.MoveLimit <= 0)
         {
-            elapsedTime = 0f;
+            if(potentialMatches.Count > 0 || previousShakedCandy != null || elapsedTime > 0)
+            {
+                elapsedTime = 0f;
+                previousShakedCandy = null;
+                potentialMatches.Clear();
+            }
+
             return;
         }
 
@@ -37,21 +51,28 @@ public class MatchHintSystem : MonoBehaviour
 
     private void ShowHint()
     {
-        List<GameObject> potentialMatches = FindPotentialMatches();
-        if (potentialMatches == null || potentialMatches.Count <= 0)
+        if (potentialMatches == null || potentialMatches.Count == 0)
         {
-            Debug.LogWarning("ELEMAN YOK");
+            potentialMatches = FindPotentialMatches();
+        }
+
+        if (potentialMatches.Count <= 0)
+        {
+            Debug.LogWarning("Eşleşme bulunamadı.");
             return;
         }
 
         int index = Random.Range(0, potentialMatches.Count);
         GameObject candy = potentialMatches[index];
-        int iterationCount = 0;
-        while (previousShakedCandy != null && previousShakedCandy == candy && iterationCount < 3)
+        if (previousShakedCandy != null && potentialMatches.Count > 1)
         {
-            index = Random.Range(0, potentialMatches.Count);
-            candy = potentialMatches[index];
-            iterationCount++;
+            int iterationCount = 0;
+            while (candy == previousShakedCandy && iterationCount < potentialMatches.Count)
+            {
+                index = (index + 1) % potentialMatches.Count;
+                candy = potentialMatches[index];
+                iterationCount++;
+            }
         }
 
         previousShakedCandy = candy;
@@ -61,11 +82,9 @@ public class MatchHintSystem : MonoBehaviour
     private List<GameObject> FindPotentialMatches()
     {
         List<GameObject> potentialMatches = new List<GameObject>();
-
         int width = board.Width;
         int height = board.Height;
 
-        // Tüm tahtayı dolaş
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
@@ -73,51 +92,35 @@ public class MatchHintSystem : MonoBehaviour
                 GameObject candy = board.AllCandies[x, y];
 
                 if (candy == null || potentialMatches.Contains(candy))
+                    continue;
+
+                if (x + 1 < width && CheckPotentialMatch(x, y, x + 1, y))
                 {
+                    potentialMatches.Add(candy);
                     continue;
                 }
 
-                if (x + 1 < width)
+                if (x - 1 >= 0 && CheckPotentialMatch(x, y, x - 1, y))
                 {
-                    if (CheckPotentialMatch(x, y, x + 1, y))
-                    {
-                        potentialMatches.Add(candy);
-                        continue;
-                    }
-                    
+                    potentialMatches.Add(candy);
+                    continue;
                 }
 
-                // Soldaki ile yer değiştirip eşleşme kontrolü
-                if (x - 1 >= 0)
+                if (y + 1 < height && CheckPotentialMatch(x, y, x, y + 1))
                 {
-                    if (CheckPotentialMatch(x, y, x - 1, y))
-                    {
-                        potentialMatches.Add(candy);
-                        continue;
-                    }
-                    
+                    potentialMatches.Add(candy);
+                    continue;
                 }
 
-                // Yukarıdaki ile yer değiştirip eşleşme kontrolü
-                if (y + 1 < height)
+                if (y - 1 >= 0 && CheckPotentialMatch(x, y, x, y - 1))
                 {
-                    if (CheckPotentialMatch(x, y, x, y + 1))
-                    {
-                        potentialMatches.Add(candy);
-                        continue;
-                    }
-                    
+                    potentialMatches.Add(candy);
+                    continue;
                 }
 
-                // Aşağıdaki ile yer değiştirip eşleşme kontrolü
-                if (y - 1 >= 0)
+                if (CheckAdvancedMatch(x, y))
                 {
-                    if (CheckPotentialMatch(x, y, x, y - 1))
-                    {
-                        potentialMatches.Add(candy);
-                        continue;
-                    }
-                    
+                    potentialMatches.Add(candy);
                 }
             }
         }
@@ -125,33 +128,52 @@ public class MatchHintSystem : MonoBehaviour
         return potentialMatches;
     }
 
+    private bool CheckAdvancedMatch(int x, int y)
+    {
+        GameObject candy = board.AllCandies[x, y];
+        if (candy == null) return false;
+
+        GameObject[,] candies = board.AllCandies;
+
+        bool isTShape =
+            (x > 0 && x < board.Width - 1 &&
+             y > 0 && y < board.Height - 1 &&
+             candies[x - 1, y]?.tag == candy.tag &&
+             candies[x + 1, y]?.tag == candy.tag &&
+             candies[x, y - 1]?.tag == candy.tag &&
+             candies[x, y + 1]?.tag == candy.tag);
+
+        bool isLShape =
+            (x > 1 && candies[x - 1, y]?.tag == candy.tag &&
+             candies[x - 2, y]?.tag == candy.tag &&
+             y > 0 && candies[x, y - 1]?.tag == candy.tag) ||
+            (x < board.Width - 2 && candies[x + 1, y]?.tag == candy.tag &&
+             candies[x + 2, y]?.tag == candy.tag &&
+             y < board.Height - 1 && candies[x, y + 1]?.tag == candy.tag);
+
+        return isTShape || isLShape;
+    }
+
+
     private bool CheckPotentialMatch(int x1, int y1, int x2, int y2)
     {
-        // Tahta sınırlarını kontrol et
-        int width = board.Width;
-        int height = board.Height;
+        GameObject candy1 = board.AllCandies[x1, y1];
+        GameObject candy2 = board.AllCandies[x2, y2];
 
-        if (x1 < 0 || x1 >= width || y1 < 0 || y1 >= height || x2 < 0 || x2 >= width || y2 < 0 || y2 >= height)
-        {
-            Debug.Log($"({x1},{y1}) ve ({x2},{y2})");
-            return false;
-        }
+        if (candy1 == null || candy2 == null) return false;
 
-        // Şekerleri geçici olarak yer değiştir
-        GameObject[,] candies = board.AllCandies;
-        GameObject temp = candies[x1, y1];
-        candies[x1, y1] = candies[x2, y2];
-        candies[x2, y2] = temp;
+        board.AllCandies[x1, y1] = candy2;
+        board.AllCandies[x2, y2] = candy1;
 
-        // Eşleşme olup olmadığını kontrol et
         bool isMatch = IsThereMatchAt(x1, y1) || IsThereMatchAt(x2, y2);
 
-        // Şekerleri eski yerine koy
-        candies[x2, y2] = candies[x1, y1];
-        candies[x1, y1] = temp;
+        board.AllCandies[x1, y1] = candy1;
+        board.AllCandies[x2, y2] = candy2;
 
         return isMatch;
     }
+
+
 
     private bool IsThereMatchAt(int x, int y)
     {
@@ -160,26 +182,45 @@ public class MatchHintSystem : MonoBehaviour
 
         if (candy == null) return false;
 
-        // Yatay eşleşme kontrolü
         if (x > 0 && x < board.Width - 1 &&
-            candies[x - 1, y] != null &&
-            candies[x + 1, y] != null &&
-            candies[x - 1, y].tag == candy.tag &&
-            candies[x + 1, y].tag == candy.tag)
+            candies[x - 1, y]?.tag == candy.tag &&
+            candies[x + 1, y]?.tag == candy.tag)
         {
             return true;
         }
 
-        // Dikey eşleşme kontrolü
         if (y > 0 && y < board.Height - 1 &&
-            candies[x, y - 1] != null &&
-            candies[x, y + 1] != null &&
-            candies[x, y - 1].tag == candy.tag &&
-            candies[x, y + 1].tag == candy.tag)
+            candies[x, y - 1]?.tag == candy.tag &&
+            candies[x, y + 1]?.tag == candy.tag)
+        {
+            return true;
+        }
+
+        if (x > 1 && candies[x - 1, y]?.tag == candy.tag &&
+            candies[x - 2, y]?.tag == candy.tag)
+        {
+            return true;
+        }
+
+        if (x < board.Width - 2 && candies[x + 1, y]?.tag == candy.tag &&
+            candies[x + 2, y]?.tag == candy.tag)
+        {
+            return true;
+        }
+
+        if (y > 1 && candies[x, y - 1]?.tag == candy.tag &&
+            candies[x, y - 2]?.tag == candy.tag)
+        {
+            return true;
+        }
+
+        if (y < board.Height - 2 && candies[x, y + 1]?.tag == candy.tag &&
+            candies[x, y + 2]?.tag == candy.tag)
         {
             return true;
         }
 
         return false;
     }
+
 }

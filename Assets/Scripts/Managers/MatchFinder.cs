@@ -105,28 +105,10 @@ public class MatchFinder : MonoBehaviour
             runningAnimations.Add(animation);
         }
 
-        //yield return WaitForExplosionAnimations(runningAnimations);
-
         CleanDestroyedCandies(matchedCandies);
 
         yield return null;
     }
-    private IEnumerator WaitForExplosionAnimations(List<Coroutine> runningAnimations)
-    {
-        while (runningAnimations.Count > 0)
-        {
-            for (int i = runningAnimations.Count - 1; i >= 0; i--)
-            {
-                if (runningAnimations[i] == null)
-                {
-                    runningAnimations.RemoveAt(i);
-                }
-            }
-            yield return null;
-        }
-
-    }
-
     private void CleanDestroyedCandies(List<GameObject> matchedCandies)
     {
         var allCandies = board.AllCandies;
