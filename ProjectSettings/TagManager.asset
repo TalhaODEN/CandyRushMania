@@ -45,6 +45,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: UI_Background
+    uniqueID: 1450814319
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: TileBackground
+    uniqueID: 3716114247
+    locked: 0
+  - name: Candy
+    uniqueID: 406872361
+    locked: 0
+  - name: UI
+    uniqueID: 953668159
     locked: 0

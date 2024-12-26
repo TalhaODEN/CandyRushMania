@@ -17,7 +17,7 @@ public class CandyShake : MonoBehaviour
 
         float elapsedTime = 0f;
 
-        while (elapsedTime < shakeDuration)
+        while (elapsedTime < shakeDuration && Time.timeScale == 1f)
         {
             Vector3 randomOffset = new Vector3
                 (Random.Range(-shakeAmount, shakeAmount), Random.Range(-shakeAmount, shakeAmount), 0);

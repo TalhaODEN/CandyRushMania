@@ -992,7 +992,7 @@ TextureImporter:
         width: 784
         height: 541
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1000,6 +1000,69 @@ TextureImporter:
       bones: []
       spriteID: 74f4a44d90bc817438e49e22cdd0f665
       internalID: 560759817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: resume_button
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 3546
+        width: 213
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a49e28f6f8a5147a14f89f96b5382d
+      internalID: 621635711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: restart_button
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 3443
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc99048290cdda48b2e54bbcc4eef76
+      internalID: -546447707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: exit_button
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 3338
+        width: 212
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfa43427135b6642a49ab20705aa887
+      internalID: 1804829885
       vertices: []
       indices: 
       edges: []
@@ -1057,6 +1120,7 @@ TextureImporter:
       dola_symboled_line_just_inside: 1549702180
       dolar_symbol: 1031915993
       dolar_symboled_line_just_inside: 1285756510
+      exit_button: 1804829885
       grey_line: -751204407
       grey_panel: 1054556371
       inside_small_square: 621949412
@@ -1083,6 +1147,8 @@ TextureImporter:
       pink_line: -1167513210
       red_title_section_big: 1791057744
       red_title_section_small: -500091256
+      restart_button: -546447707
+      resume_button: 621635711
       slider_background: -177381103
       square_grey: 590739732
       star_panel_small: -176145991

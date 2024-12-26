@@ -8,6 +8,7 @@ public class SwipeManager : MonoBehaviour
     private Board board;
     private MatchFinder matchFinder;
     private BoardManager boardManager;
+    private UIManager uiManager;
     public int MoveLimit { get { return moveLimit;} }
 
     [Header("Mouse Infos")]
@@ -39,15 +40,23 @@ public class SwipeManager : MonoBehaviour
         board = FindObjectOfType<Board>();
         matchFinder = FindObjectOfType<MatchFinder>();
         boardManager = FindObjectOfType<BoardManager>();
+        uiManager = FindObjectOfType<UIManager>();
+        uiManager.SetMoveCount();
         isCoroutineRunning = false;
         isMatchedAnything = false;
     }
 
     private void Update()
     {
-        if (!Input.GetMouseButtonDown(0) && !Input.GetMouseButtonUp(0) && IsCandySelected() && !isCoroutineRunning)
+        if(Time.timeScale <= 0f)
+        {
+            return;
+        }
+        if (!Input.GetMouseButtonDown(0) && !Input.GetMouseButtonUp(0) && 
+            IsCandySelected() && !isCoroutineRunning)
         {
             ResetVariables();
+            return;
         }
         if (Input.GetMouseButtonDown(0) && !isCoroutineRunning)
         {
@@ -171,6 +180,7 @@ public class SwipeManager : MonoBehaviour
         {
             moveLimit--;
             ResetVariables();
+            uiManager.SetMoveCount();
             yield break;
         }
 
