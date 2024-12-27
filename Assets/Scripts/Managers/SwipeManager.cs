@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SwipeManager : MonoBehaviour
 {
     private Board board;
     private MatchFinder matchFinder;
     private BoardManager boardManager;
+    private LevelData levelData;
     private UIManager uiManager;
     public int MoveLimit { get { return moveLimit;} }
 
@@ -41,7 +43,10 @@ public class SwipeManager : MonoBehaviour
         matchFinder = FindObjectOfType<MatchFinder>();
         boardManager = FindObjectOfType<BoardManager>();
         uiManager = FindObjectOfType<UIManager>();
-        uiManager.SetMoveCount();
+        string currentScene = SceneManager.GetActiveScene().name;
+        levelData = Resources.Load<LevelData>($"ScriptableObjects/{currentScene}Data");
+        moveLimit = levelData.LevelMoveLimit;
+        uiManager.SetMoveCount(moveLimit);
         isCoroutineRunning = false;
         isMatchedAnything = false;
     }
@@ -180,7 +185,7 @@ public class SwipeManager : MonoBehaviour
         {
             moveLimit--;
             ResetVariables();
-            uiManager.SetMoveCount();
+            uiManager.SetMoveCount(moveLimit);
             yield break;
         }
 

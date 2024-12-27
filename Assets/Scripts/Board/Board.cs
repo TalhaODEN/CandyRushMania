@@ -19,6 +19,7 @@ public class Board : MonoBehaviour
 
     [Header("Prefab Object")]
     [SerializeField] private GameObject tilePrefab;
+    [SerializeField] private GameObject boardObject;
 
     private GameObject[,] allTiles;
     private GameObject[,] allCandies;
@@ -36,6 +37,8 @@ public class Board : MonoBehaviour
     public GameObject[,] AllTiles { get { return allTiles; }}
     private void Start()
     {
+        GameData gameData = Resources.Load<GameData>($"ScriptableObjects/GameData");
+        prefabCandies = gameData.PrefabCandies;
         matchFinder = FindObjectOfType<MatchFinder>();
         InitializeBoard();       
         CreateBoard();
@@ -49,7 +52,8 @@ public class Board : MonoBehaviour
 
     private void CreateBoard()
     {
-        Vector2 startPoint = new Vector2(transform.position.x + xOffSet, transform.position.y + yOffSet);
+        Vector2 startPoint = new Vector2(boardObject.transform.position.x + xOffSet, 
+                                         boardObject.transform.position.y + yOffSet);
 
         for (int y = 0; y < height; y++)
         {
@@ -80,6 +84,7 @@ public class Board : MonoBehaviour
                 }
             }
         }
+        matchFinder = null;
     }
 
 

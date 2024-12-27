@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814310e62d325884897c2423de9cc696, type: 3}
+  m_Name: VoiceData
+  m_EditorClassIdentifier: 
+  activeMusicButtonSprite: {fileID: 337965574, guid: 55510a182362555408228a8e2a85335d, type: 3}
+  activeSoundButtonSprite: {fileID: -1635453884, guid: 55510a182362555408228a8e2a85335d, type: 3}
+  passiveMusicButtonSprite: {fileID: -990991850, guid: 55510a182362555408228a8e2a85335d, type: 3}
+  passiveSoundButtonSprite: {fileID: 1718247025, guid: 55510a182362555408228a8e2a85335d, type: 3}
+  isMusicActive: 1
+  isSoundActive: 1

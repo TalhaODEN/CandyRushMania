@@ -2,15 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MatchFinder : MonoBehaviour
 {
+    public CandyNeed[] MatchedNeedCandies { get { return matchedNeedCandies; } }
+
     private Board board;
     private SwipeManager swipeManager;
+    private UIManager uiManager;
+  
+    private CandyNeed[] matchedNeedCandies;
+
     private void Start()
     {
         board = FindObjectOfType<Board>();
         swipeManager = FindObjectOfType<SwipeManager>();
+        uiManager = FindObjectOfType<UIManager>();
+        string currentScene = SceneManager.GetActiveScene().name;
+        LevelData levelData = Resources.Load<LevelData>($"ScriptableObjects/{currentScene}Data");
+        CandyNeed[] needs = new CandyNeed[levelData.CandyNeeds.Length];
+        for (int i = 0; i < needs.Length; i++)
+        {
+            needs[i] = new CandyNeed()
+            {
+                candyTag = levelData.CandyNeeds[i].candyTag,
+                neededAmount = levelData.CandyNeeds[i].neededAmount
+            };
+        }
+        matchedNeedCandies = new CandyNeed[levelData.CandyNeeds.Length];
+        for (int i = 0; i < matchedNeedCandies.Length; i++)
+        {
+            matchedNeedCandies[i] = new CandyNeed()
+            {
+                candyTag = levelData.CandyNeeds[i].candyTag,
+                neededAmount = 0
+            };
+        }
     }
     public List<GameObject> FindMatchesAtStart()
     {
@@ -36,34 +64,7 @@ public class MatchFinder : MonoBehaviour
 
         return matchedCandies;
     }
-    public void FindMatchesForSwipe()
-    {
-        List<GameObject> matchedCandies = new List<GameObject>();
-
-        List<GameObject> horizontalMatches = FindHorizontalMatches();
-        foreach (var candy in horizontalMatches)
-        {
-            if (!matchedCandies.Contains(candy))
-            {
-                matchedCandies.Add(candy);
-            }
-        }
-
-        List<GameObject> verticalMatches = FindVerticalMatches();
-        foreach (var candy in verticalMatches)
-        {
-            if (!matchedCandies.Contains(candy))
-            {
-                matchedCandies.Add(candy);
-            }
-        }
-
-        if (matchedCandies.Count <= 0)
-        {
-            return;
-        }
-
-    }
+    
     public IEnumerator FindMatchesForManager()
     {
         List<GameObject> matchedCandies = new List<GameObject>();
@@ -92,7 +93,19 @@ public class MatchFinder : MonoBehaviour
             yield break;
         }
         swipeManager.isMatchedAnything = true;
+
+        foreach (CandyNeed candyNeed in matchedNeedCandies) 
+        {
+            foreach (GameObject checkCandy in matchedCandies)
+            {
+                if(checkCandy.tag == candyNeed.candyTag)
+                {
+                    candyNeed.neededAmount++;
+                }
+            }
+        }
         StartCoroutine(ExplosionAnimationController(matchedCandies));
+        uiManager.SetNeedsCount();
     }
     
     private IEnumerator ExplosionAnimationController(List<GameObject> matchedCandies)
@@ -204,5 +217,13 @@ public class MatchFinder : MonoBehaviour
         }
         candy.transform.localScale = targetScale;
         Destroy(candy);
+    }
+
+    public void ResetMatchedNeedCandies()
+    {
+        foreach (CandyNeed item in matchedNeedCandies)
+        {
+            item.neededAmount = 0;
+        }
     }
 }
