@@ -1,7 +1,7 @@
 <table style="width: 100%; border: 0;">
   <tr>
     <td style="width: 50%; padding: 10px;">
-      <img src="./Ekran Görüntüleri/1.png" alt="Görsel 1" style="width: 100%;"/>
+      <img src="./Ekran Görüntüsü/1.png" alt="Görsel 1" style="width: 100%;"/>
     </td>
     <td style="width: 50%; padding: 10px;">
       <img src="./Ekran Görüntüsü/2.png" alt="Görsel 2" style="width: 100%;"/>
