@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Board : MonoBehaviour
 {
     private MatchFinder matchFinder;
+    private LevelData levelData;
 
     [Header("Width and Height")]
     [SerializeField] private int width;
@@ -37,11 +41,18 @@ public class Board : MonoBehaviour
     public GameObject[,] AllTiles { get { return allTiles; }}
     private void Start()
     {
-        GameData gameData = Resources.Load<GameData>($"ScriptableObjects/GameData");
-        prefabCandies = gameData.PrefabCandies;
-        matchFinder = FindObjectOfType<MatchFinder>();
-        InitializeBoard();       
-        CreateBoard();
+        string currentScene = PlayerPrefs.GetString("CurrentScene");
+
+        if (!string.IsNullOrEmpty(currentScene))
+        {
+            levelData = Resources.Load<LevelData>($"ScriptableObjects/{currentScene}Data");
+            GameData gameData = Resources.Load<GameData>($"ScriptableObjects/GameData");
+            prefabCandies = gameData.PrefabCandies;
+            matchFinder = FindObjectOfType<MatchFinder>();
+
+            InitializeBoard();
+            CreateBoard();
+        }
     }
 
     private void InitializeBoard()
@@ -52,7 +63,7 @@ public class Board : MonoBehaviour
 
     private void CreateBoard()
     {
-        Vector2 startPoint = new Vector2(boardObject.transform.position.x + xOffSet, 
+        Vector2 startPoint = new Vector2(boardObject.transform.position.x + xOffSet,
                                          boardObject.transform.position.y + yOffSet);
 
         for (int y = 0; y < height; y++)
@@ -68,25 +79,26 @@ public class Board : MonoBehaviour
 
                 while (hasMatch)
                 {
-                    PlaceCandy(tilePosition, backgroundTile, x, y);  
+                    PlaceCandy(tilePosition, backgroundTile, x, y);
                     candy = allCandies[x, y];
 
                     List<GameObject> matches = matchFinder.FindMatchesAtStart();
 
-                    if (matches.Count == 0)  
+                    if (matches.Count == 0)
                     {
-                        hasMatch = false;  
+                        hasMatch = false;
                     }
                     else
                     {
-                        Destroy(candy);  
+                        Destroy(candy);
                     }
                 }
             }
         }
+        
+       
         matchFinder = null;
     }
-
 
     public Vector2 CalculateTilePosition(Vector2 startPoint, int x, int y)
     {
@@ -111,6 +123,37 @@ public class Board : MonoBehaviour
 
     public int GetRandomCandyIndex()
     {
+        int totalNeeds = levelData.CandyNeeds.Length;
+
+        List<float> spawnChances = new List<float>();
+        float totalWeight = 0f;
+
+        foreach (CandyNeed candyNeed in levelData.CandyNeeds)
+        {
+            float weight = candyNeed.neededAmount > 0 ? 1.025f : 1; 
+            totalWeight += weight; 
+            spawnChances.Add(weight);  
+        }
+
+        for (int i = totalNeeds; i < prefabCandies.Length; i++)
+        {
+            spawnChances.Add(1f);  
+            totalWeight += 1f;  
+        }
+
+        float randomValue = Random.Range(0f, totalWeight);  
+
+        float cumulativeWeight = 0f;
+
+        for (int i = 0; i < prefabCandies.Length; i++)
+        {
+            cumulativeWeight += spawnChances[i];
+
+            if (randomValue < cumulativeWeight)
+            {
+                return i;  
+            }
+        }
         return Random.Range(0, prefabCandies.Length);
     }
 }

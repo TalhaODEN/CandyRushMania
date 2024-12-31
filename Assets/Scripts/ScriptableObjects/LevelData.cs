@@ -13,6 +13,8 @@ public class CandyNeed
 public class LevelData : ScriptableObject
 {
     public int LevelMoveLimit { get { return levelmoveLimit; } }
+    public int[] StarScoreLimits { get { return starScoreLimits; } }
+
     public CandyNeed[] CandyNeeds { get { return candyNeeds; } }
 
 
@@ -21,5 +23,8 @@ public class LevelData : ScriptableObject
 
     [Header("Needs")]
     [SerializeField] private CandyNeed[] candyNeeds;
+
+    [Header("3 Star Score Limit")]
+    [SerializeField] private int[] starScoreLimits;
     
 }

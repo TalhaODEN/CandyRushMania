@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b89e1400e0b5864bb9812492184dfda, type: 3}
   m_Name: Level2Data
   m_EditorClassIdentifier: 
-  levelmoveLimit: 15
+  levelmoveLimit: 70
   candyNeeds:
   - candyTag: Gray_Candy
-    neededAmount: 5
+    neededAmount: 20
   - candyTag: Turquoise_Candy
-    neededAmount: 8
+    neededAmount: 20
+  - candyTag: Orange_Candy
+    neededAmount: 10
+  - candyTag: Red_Candy
+    neededAmount: 10
+  starScoreLimits: 34210000f0550000b8880000

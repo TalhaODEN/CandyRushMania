@@ -290,7 +290,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &69060376
 MonoBehaviour:
@@ -304,31 +304,109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310b5c130bed5b14bb5e3bbed05911c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedLevel:
+    levelIndex: 0
+    levelButton: {fileID: 0}
+    levelButtonSprite: {fileID: 0}
+    starsBackground: {fileID: 0}
+    stars: []
   levels:
-  - levelIndex: 2
+  - levelIndex: 1
     levelButton: {fileID: 847460086}
-  - levelIndex: 3
+    levelButtonSprite: {fileID: 1847319999, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 2066188495}
+    stars:
+    - {fileID: 1562115431}
+    - {fileID: 1677435112}
+    - {fileID: 592270337}
+  - levelIndex: 2
     levelButton: {fileID: 1325206783}
+    levelButtonSprite: {fileID: 1754195578, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 836892671}
+    stars:
+    - {fileID: 1363293830}
+    - {fileID: 720954541}
+    - {fileID: 1796382258}
   - levelIndex: -1
     levelButton: {fileID: 1246052569}
+    levelButtonSprite: {fileID: -804849163, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 1274418930}
+    stars:
+    - {fileID: 864965793}
+    - {fileID: 1962582418}
+    - {fileID: 1549511992}
   - levelIndex: -1
     levelButton: {fileID: 1135043830}
+    levelButtonSprite: {fileID: -1382121639, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 1693739236}
+    stars:
+    - {fileID: 1329395375}
+    - {fileID: 15987208}
+    - {fileID: 509031544}
   - levelIndex: -1
     levelButton: {fileID: 641836104}
+    levelButtonSprite: {fileID: -762055453, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 1617292477}
+    stars:
+    - {fileID: 1006917573}
+    - {fileID: 2105064146}
+    - {fileID: 1679052495}
   - levelIndex: -1
     levelButton: {fileID: 1257425401}
+    levelButtonSprite: {fileID: 367393879, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 1980163943}
+    stars:
+    - {fileID: 1368984962}
+    - {fileID: 1140700846}
+    - {fileID: 1443715254}
   - levelIndex: -1
     levelButton: {fileID: 1190930574}
+    levelButtonSprite: {fileID: 1596248410, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 1104835990}
+    stars:
+    - {fileID: 1273741784}
+    - {fileID: 1672378862}
+    - {fileID: 499342407}
   - levelIndex: -1
     levelButton: {fileID: 1607118389}
+    levelButtonSprite: {fileID: 489859722, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 2431242}
+    stars:
+    - {fileID: 171873700}
+    - {fileID: 832465577}
+    - {fileID: 336164652}
   - levelIndex: -1
     levelButton: {fileID: 1060549877}
+    levelButtonSprite: {fileID: -391951302, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 2005500508}
+    stars:
+    - {fileID: 1520428457}
+    - {fileID: 911452399}
+    - {fileID: 323712919}
   - levelIndex: -1
     levelButton: {fileID: 734056289}
+    levelButtonSprite: {fileID: 1189861172, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 918242167}
+    stars:
+    - {fileID: 1392437361}
+    - {fileID: 549658128}
+    - {fileID: 633803837}
   - levelIndex: -1
     levelButton: {fileID: 2061748313}
+    levelButtonSprite: {fileID: 1765426054, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 1587907924}
+    stars:
+    - {fileID: 1333354266}
+    - {fileID: 104544256}
+    - {fileID: 214242533}
   - levelIndex: -1
     levelButton: {fileID: 1882992183}
+    levelButtonSprite: {fileID: -730161857, guid: ce76fa03518213745aa5049a8fbf94be, type: 3}
+    starsBackground: {fileID: 1043260593}
+    stars:
+    - {fileID: 1161427364}
+    - {fileID: 135172452}
+    - {fileID: 1582432722}
   levelsPanel: {fileID: 213986478}
   SelectedLevelText: {fileID: 292144821}
   forwardButton: {fileID: 1065014101}

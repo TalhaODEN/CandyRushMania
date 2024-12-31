@@ -199,7 +199,7 @@ public class BoardManager : MonoBehaviour
             {
                 Vector2 spawnPosition = board.AllTiles[x, board.Height - 1].transform.position + new Vector3(0, 1f, 0);
 
-                int candyToUse = Random.Range(0, board.PrefabCandies.Length);
+                int candyToUse = board.GetRandomCandyIndex();
                 GameObject candy = Instantiate(board.PrefabCandies[candyToUse], spawnPosition, Quaternion.identity);
                 candy.GetComponent<Candie>().row = x;
                 candy.GetComponent<Candie>().column = y;

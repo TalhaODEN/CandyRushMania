@@ -7,24 +7,33 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     private VoiceData voiceData;
+    private SaveManager saveManager;
 
     private Button forwardButton;
     private Button quitButton;
+    private Button deleteButton;
 
     public delegate void ButtonAction();
     public static event ButtonAction OnForwardButtonClicked;
     public static event ButtonAction OnQuitButtonClicked;
+    public static event ButtonAction OnDeleteButtonClicked;
 
     private void Start()
     {
+        saveManager = FindObjectOfType<SaveManager>();
+
         forwardButton = GameObject.Find("ForwardButton").GetComponent<Button>();
         quitButton = GameObject.Find("QuitButton").GetComponent<Button>();
+        deleteButton = GameObject.Find("DeleteButton").GetComponent<Button>();
 
         forwardButton.onClick.AddListener(ForwardButtonClicked);
         quitButton.onClick.AddListener(QuitButtonClicked);
+        deleteButton.onClick.AddListener(DeleteButtonClicked);
 
         OnForwardButtonClicked += HandleForwardButtonClick;
         OnQuitButtonClicked += HandleQuitButtonClick;
+        OnDeleteButtonClicked += HandleDeleteButtonClick;
+
 
         voiceData = Resources.Load<VoiceData>($"ScriptableObjects/VoiceData");
     }
@@ -33,6 +42,7 @@ public class MenuManager : MonoBehaviour
     {
         OnForwardButtonClicked -= HandleForwardButtonClick;
         OnQuitButtonClicked -= HandleQuitButtonClick;
+        OnDeleteButtonClicked -= HandleDeleteButtonClick;
     }
 
     private void ForwardButtonClicked()
@@ -45,9 +55,14 @@ public class MenuManager : MonoBehaviour
         OnQuitButtonClicked?.Invoke();
     }
 
+    private void DeleteButtonClicked()
+    {
+        OnDeleteButtonClicked?.Invoke();
+    }
+
     private void HandleForwardButtonClick()
     {
-        SceneManager.LoadScene(1); 
+        SceneManager.LoadScene("SelectLevel"); 
     }
 
     private void HandleQuitButtonClick()
@@ -63,9 +78,10 @@ public class MenuManager : MonoBehaviour
         #endif
     }
 
-    public void DisableButtonInteractivity()
+    private void HandleDeleteButtonClick()
     {
-        forwardButton.interactable = false;
-        quitButton.interactable = false;
+        saveManager.ResetAllLevelData();
     }
+
+    
 }

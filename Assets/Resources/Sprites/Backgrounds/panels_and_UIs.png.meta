@@ -627,7 +627,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: levle_complete_text
+      name: level_complete_text
       rect:
         serializedVersion: 2
         x: 941
@@ -1055,7 +1055,7 @@ TextureImporter:
         width: 212
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1125,13 +1125,13 @@ TextureImporter:
       grey_panel: 1054556371
       inside_small_square: 621949412
       level_complete_panel: -562966551
+      level_complete_text: 1184937009
       level_panel_background_without_border: 274893139
       level_panel_inside: 1098376905
       level_panel_with_red_title_section1: 2069270333
       level_panel_without_red_title_section1: 1084179420
       level_select_full: 218010122
       level_select_text1: 79472505
-      levle_complete_text: 1184937009
       line_inside: -1975992507
       line_without_symbol_with_inside: -1624004526
       line_without_symbol_without_inside: 659214316
