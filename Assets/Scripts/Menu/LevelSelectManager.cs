@@ -207,45 +207,28 @@ public class LevelSelectManager : MonoBehaviour
         // İlk olarak butonu 90 derece döndür
         float rotationDuration = 1.2f;
         float timeElapsed = 0f;
-        float startRotation = level.levelButton.transform.rotation.eulerAngles.x;
-        float endRotation = 360f;
-        float rotation;
-        bool spriteChanged = false; // Sprite'ın değişip değişmediğini takip etmek için bir flag
+        float startRotation = level.levelButton.transform.localRotation.eulerAngles.x;
+        float endRotation = 90f; // Hedef dönüş açısı, bu kez 90 derece
 
-        // Dönme animasyonu
         while (timeElapsed < rotationDuration)
         {
-            rotation = Mathf.Lerp(startRotation, endRotation, timeElapsed / rotationDuration);
-            level.levelButton.transform.rotation = Quaternion.Euler(
-                rotation,
-                level.levelButton.transform.rotation.eulerAngles.y,
-                level.levelButton.transform.rotation.eulerAngles.z
-            );
-
-            // Rotasyon 90 dereceye yaklaştığında sprite değişimi yap
-            if (!spriteChanged && rotation >= 89f && rotation <= 91f)
-            {
-                level.levelButton.GetComponent<Image>().sprite = level.levelButtonSprite;
-                spriteChanged = true; // Bir daha değiştirilmemesi için flag'i işaretle
-            }
+            float rotation = Mathf.Lerp(startRotation, endRotation, timeElapsed / rotationDuration);
+            level.levelButton.transform.localRotation = Quaternion.Euler(rotation, level.levelButton.transform.localRotation.eulerAngles.y, level.levelButton.transform.localRotation.eulerAngles.z);
 
             timeElapsed += Time.deltaTime;
             yield return null;
         }
 
-        level.levelButton.transform.rotation = Quaternion.Euler(
-            endRotation,
-            level.levelButton.transform.rotation.eulerAngles.y,
-            level.levelButton.transform.rotation.eulerAngles.z
-        );
+        // Dönüşüm tamamlandıktan sonra sprite değişimi
+        level.levelButton.GetComponent<Image>().sprite = level.levelButtonSprite;
 
+        // Buton arka planını aktif et
         level.starsBackground.SetActive(true);
 
-        level.levelButton.transform.rotation = Quaternion.Euler(
-            0f,
-            level.levelButton.transform.rotation.eulerAngles.y,
-            level.levelButton.transform.rotation.eulerAngles.z
-        );
+        // Yerel dönüşümle sıfırlama (gerekirse)
+        level.levelButton.transform.localRotation = Quaternion.identity;
     }
+
+
 
 }

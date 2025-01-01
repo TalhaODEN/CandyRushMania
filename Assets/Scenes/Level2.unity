@@ -5029,6 +5029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1462838f14b50b14a923f1aa5d5d28f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  candyBombPrefab: {fileID: 5708884975912335290, guid: 2265f517602d76f4188310af671638fa, type: 3}
 --- !u!114 &1561258752
 MonoBehaviour:
   m_ObjectHideFlags: 0

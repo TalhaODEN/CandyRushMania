@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class MatchHintSystem : MonoBehaviour
 
     [Header("Potential Matches List")]
     [SerializeField] private List<GameObject> potentialMatches;
+
     private void Start()
     {
         board = FindObjectOfType<Board>();

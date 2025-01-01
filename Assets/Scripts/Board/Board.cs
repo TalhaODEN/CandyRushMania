@@ -30,6 +30,8 @@ public class Board : MonoBehaviour
 
     [Header("Candies")]
     [SerializeField] private GameObject[] prefabCandies;
+    [SerializeField] private GameObject candyBombPrefab;
+    public GameObject CandyBombPrefab { get { return candyBombPrefab; } }
     public GameObject[] PrefabCandies {get{ return prefabCandies;}}
     public float XSpacing { get { return xSpacing; } }
     public float YSpacing { get { return ySpacing; } }
@@ -48,6 +50,7 @@ public class Board : MonoBehaviour
             levelData = Resources.Load<LevelData>($"ScriptableObjects/{currentScene}Data");
             GameData gameData = Resources.Load<GameData>($"ScriptableObjects/GameData");
             prefabCandies = gameData.PrefabCandies;
+            candyBombPrefab = gameData.CandyBombPrefab;
             matchFinder = FindObjectOfType<MatchFinder>();
 
             InitializeBoard();

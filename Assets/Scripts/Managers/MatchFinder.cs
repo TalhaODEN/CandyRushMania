@@ -4,16 +4,24 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public class CandyBomb
+{
+    public int Row;
+    public int Column;
+}
+
 public class MatchFinder : MonoBehaviour
 {
     public CandyNeed[] MatchedNeedCandies { get { return matchedNeedCandies; } }
+    public CandyBomb candyBomb { get; set; }
 
     private Board board;
     private SwipeManager swipeManager;
     private UIManager uiManager;
     private ScoreManager scoreManager;
-
+    private AudioManager audioManager;
     private CandyNeed[] matchedNeedCandies;
+    
 
     private void Start()
     {
@@ -21,7 +29,9 @@ public class MatchFinder : MonoBehaviour
         swipeManager = FindObjectOfType<SwipeManager>();
         uiManager = FindObjectOfType<UIManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
+        audioManager = FindObjectOfType<AudioManager>();
 
+        candyBomb = null;
         string currentScene = SceneManager.GetActiveScene().name;
         LevelData levelData = Resources.Load<LevelData>($"ScriptableObjects/{currentScene}Data");
         CandyNeed[] needs = new CandyNeed[levelData.CandyNeeds.Length];
@@ -119,21 +129,21 @@ public class MatchFinder : MonoBehaviour
         }
         StartCoroutine(ExplosionAnimationController(matchedCandies));
         uiManager.SetNeedsCount();
-
         scoreManager.IncreaseExplosionMultiplier();
+
+
     }
 
 
 
     public IEnumerator ExplosionAnimationController(List<GameObject> matchedCandies)
     {
-        List<Coroutine> runningAnimations = new List<Coroutine>();
-        Coroutine animation = null;
         foreach(GameObject matchedCandy in matchedCandies)
         {
-            animation = StartCoroutine(PlayCandyExplosionAnimation(matchedCandy));
-            runningAnimations.Add(animation);
+            StartCoroutine(PlayCandyExplosionAnimation(matchedCandy));
         }
+
+        audioManager.PlayPoppingCandySfx();
 
         CleanDestroyedCandies(matchedCandies);
 
@@ -172,6 +182,7 @@ public class MatchFinder : MonoBehaviour
 
                     if (matchCount >= 3)
                     {
+                        
                         for (int i = 0; i < matchCount; i++)
                         {
                             horizontalMatches.Add(board.AllCandies[x + i, y]);
@@ -179,7 +190,7 @@ public class MatchFinder : MonoBehaviour
                         int score = scoreManager.CalculateScore(matchCount);
                         uiManager.UpdateScore(score); 
 
-                        if (matchCount >= 4)
+                        if (matchCount >= 5)
                         {
                             scoreManager.IncreaseExplosionMultiplier(); 
                         }
@@ -212,6 +223,7 @@ public class MatchFinder : MonoBehaviour
 
                     if (matchCount >= 3)
                     {
+                        
                         for (int i = 0; i < matchCount; i++)
                         {
                             verticalMatches.Add(board.AllCandies[x, y + i]);
@@ -219,7 +231,7 @@ public class MatchFinder : MonoBehaviour
                         int score = scoreManager.CalculateScore(matchCount);
                         uiManager.UpdateScore(score); 
 
-                        if (matchCount >= 4)
+                        if (matchCount >= 5)
                         {
                             scoreManager.IncreaseExplosionMultiplier(); 
                         }

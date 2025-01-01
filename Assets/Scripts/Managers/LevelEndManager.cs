@@ -11,6 +11,7 @@ public class LevelEndManager : MonoBehaviour
     private MatchFinder matchFinder;
     private UIManager uiManager;
     private ScoreManager scoreManager;
+    private AudioManager audioManager;
 
     private bool isEndLevelActive;
     public int stars = 0; 
@@ -22,6 +23,7 @@ public class LevelEndManager : MonoBehaviour
         matchFinder = FindObjectOfType<MatchFinder>();
         uiManager = FindObjectOfType<UIManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
+        audioManager = FindObjectOfType<AudioManager>();
         isEndLevelActive = false;
         saveManager = SaveManager.Instance;
         string currentScene = SceneManager.GetActiveScene().name;
@@ -60,6 +62,7 @@ public class LevelEndManager : MonoBehaviour
         if (swipeManager.MoveLimit <= 0 && !HasCollectedRequiredCandies())
         {
             Debug.Log("Level baþarýlamadý.");
+            audioManager.PlayLevelFailedSfx();
             uiManager.LevelFailedPanel.SetActive(true);
             Time.timeScale = 0f;
             yield break;
@@ -73,5 +76,6 @@ public class LevelEndManager : MonoBehaviour
         saveManager.SaveLevelData(currentSceneIndex, stars, true, false);
         yield return new WaitForSeconds(0.2f);
         uiManager.OpenLevelCompletedPanel();
+        audioManager.PlayLevelCompletedSfx();
     }
 }

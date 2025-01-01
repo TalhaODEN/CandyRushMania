@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
@@ -30,7 +31,6 @@ public class BoardManager : MonoBehaviour
         {
             yield break;
         }
-
         while (hasMatch)
         {
             yield return StartCoroutine(SlideCandies());
@@ -57,6 +57,21 @@ public class BoardManager : MonoBehaviour
             }
         }
     }
+
+    private void CreateCandyBomb()
+    {
+        int x = matchFinder.candyBomb.Row;
+        int y = matchFinder.candyBomb.Column;
+        GameObject CandyBomb = Instantiate
+            (board.CandyBombPrefab, board.AllTiles[x,y].transform.position,Quaternion.identity);
+        CandyBomb.name = $"{board.AllTiles[x, y].name}_candyBomb";
+        CandyBomb.GetComponent<Candie>().row = x;
+        CandyBomb.GetComponent<Candie>().column = y;
+        board.AllCandies[x, y] = CandyBomb;
+        matchFinder.candyBomb = null;
+    }
+
+
 
     private IEnumerator SlideCandies()
     {

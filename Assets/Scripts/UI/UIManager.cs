@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
     private LevelData levelData;
     private MatchFinder matchFinder;
     private LevelEndManager levelEndManager;
+    private AudioManager audioManager;
 
     private int currentScore = 0;
     private int[] starScoreLimits;
@@ -97,6 +98,7 @@ public class UIManager : MonoBehaviour
         levelEndManager = FindObjectOfType<LevelEndManager>();
         swipeManager = FindObjectOfType<SwipeManager>();
         matchFinder = FindObjectOfType<MatchFinder>();
+        audioManager = FindObjectOfType<AudioManager>();
 
         voiceData = Resources.Load<VoiceData>($"ScriptableObjects/VoiceData");
         SetStartVolumeSettings();
@@ -225,11 +227,13 @@ public class UIManager : MonoBehaviour
         {
             musicButton.GetComponent<Image>().sprite = passiveMusicButtonSprite;
             voiceData.isMusicActive = false;
+            audioManager.ToggleMusicMute();
         }
         else
         {
             musicButton.GetComponent<Image>().sprite = activeMusicButtonSprite;
             voiceData.isMusicActive = true;
+            audioManager.ToggleMusicMute();
         }
     }
 
@@ -239,11 +243,13 @@ public class UIManager : MonoBehaviour
         {
             soundButton.GetComponent<Image>().sprite = passiveSoundButtonSprite;
             voiceData.isSoundActive = false;
+            audioManager.ToggleEffectMute();
         }
         else
         {
             soundButton.GetComponent<Image>().sprite = activeSoundButtonSprite;
             voiceData.isSoundActive = true;
+            audioManager.ToggleEffectMute();
         }
     }
 

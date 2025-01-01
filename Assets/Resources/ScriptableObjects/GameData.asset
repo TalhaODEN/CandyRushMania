@@ -19,3 +19,4 @@ MonoBehaviour:
   - {fileID: 1015226207716318848, guid: 2293028ae92ed0e448e8dfb3c70acb4a, type: 3}
   - {fileID: 1543872587682651678, guid: acaa6793b5fa17642bfcea4a636c8898, type: 3}
   - {fileID: 7396566305621841032, guid: 6ebd5adf57502d2479d958b528e7b90a, type: 3}
+  candyBombPrefab: {fileID: 5708884975912335290, guid: 2265f517602d76f4188310af671638fa, type: 3}
